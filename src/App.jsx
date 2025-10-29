@@ -15,6 +15,7 @@ import UserDetails from "./Routes/pages/UserDetails";
 import Users from "./API/Users";
 import Pagination from "./components/Pagination";
 import ReduxMiniVersion from "./components/ReduxMiniVersion";
+import UploadFile from "./FileHandling/UploadFile";
 
 const App = () => {
   const user = {
@@ -49,6 +50,7 @@ const App = () => {
         <Users />
         <Pagination />
         <ReduxMiniVersion />
+        <UploadFile />
       </BrowserRouter>
     </div>
   );
