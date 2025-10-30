@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import UserCard from "./components/UserCard";
 import Counter from "./components/Counter";
 import ParentComponent from "./components/ParentComponent";
@@ -19,12 +19,15 @@ import UploadFile from "./FileHandling/UploadFile";
 import ReduxCounter from "./components/ReduxCounter";
 import HOC from "./AdvancedReact/HOC";
 import RenderProps from "./AdvancedReact/RenderProps";
+import Modal from "./AdvancedReact/Modal";
+import ForwardingRef from "./AdvancedReact/ForwardingRef";
 
 const App = () => {
   const user = {
     name: "hadia",
     email: "tariqhadia12@gmail.com",
   };
+  const [show, setshow] = useState(false)
   return (
     <div>
       <BrowserRouter>
@@ -58,6 +61,14 @@ const App = () => {
         <HOC />
         <RenderProps />
       </BrowserRouter>
+<button onClick={()=>setshow(true)}>Click for portal</button>
+      {
+        show &&
+        <Modal>
+        <h1>This is the modal box</h1>
+      </Modal>
+      }
+      <ForwardingRef />
     </div>
   );
 };
