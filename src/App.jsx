@@ -17,6 +17,8 @@ import Pagination from "./components/Pagination";
 import ReduxMiniVersion from "./components/ReduxMiniVersion";
 import UploadFile from "./FileHandling/UploadFile";
 import ReduxCounter from "./components/ReduxCounter";
+import HOC from "./AdvancedReact/HOC";
+import RenderProps from "./AdvancedReact/RenderProps";
 
 const App = () => {
   const user = {
@@ -53,6 +55,8 @@ const App = () => {
         <ReduxMiniVersion />
         <UploadFile />
         <ReduxCounter />
+        <HOC />
+        <RenderProps />
       </BrowserRouter>
     </div>
   );

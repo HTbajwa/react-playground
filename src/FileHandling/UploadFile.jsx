@@ -5,7 +5,6 @@ function UploadFile() {
   const [preview, setPreview] = useState(null);
   const [uploaded, setUploaded] = useState(false);
 
-  // 🟢 1. Select File + Preview
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
@@ -14,21 +13,21 @@ function UploadFile() {
     }
   };
 
-  // 🟡 2. "Upload" (Dummy Simulation)
+ 
   const handleUpload = async () => {
     if (!file) return alert("Please select a file first!");
 
-    // Simulate backend upload delay
+   
     await new Promise((res) => setTimeout(res, 1000));
 
-    // Instead of sending to server, we just mark as uploaded
+    
     setUploaded(true);
-    alert("✅ File uploaded successfully (dummy upload)");
+    alert("File uploaded successfully (dummy upload)");
   };
 
-  // 🔵 3. Download Dummy File (simulated)
+ 
   const handleDownload = () => {
-    // Create dummy text file
+  
     const dummyBlob = new Blob(["This is dummy file content."], {
       type: "text/plain",
     });
@@ -38,13 +37,13 @@ function UploadFile() {
     link.click();
   };
 
-  // 🟣 4. Simulate FormData handling (file + name)
+ 
   const handleFormData = () => {
     const formData = new FormData();
     formData.append("username", "Hadia Tariq");
     formData.append("file", file || "No file selected");
 
-    // Show what FormData would contain
+   
     for (let [key, value] of formData.entries()) {
       console.log(key, value);
     }
