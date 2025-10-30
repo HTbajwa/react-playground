@@ -16,6 +16,7 @@ import Users from "./API/Users";
 import Pagination from "./components/Pagination";
 import ReduxMiniVersion from "./components/ReduxMiniVersion";
 import UploadFile from "./FileHandling/UploadFile";
+import ReduxCounter from "./components/ReduxCounter";
 
 const App = () => {
   const user = {
@@ -44,13 +45,14 @@ const App = () => {
         <ParentComponent />
         <Theme />
         <MultipleInputForm />
-        <h1>React Hook Forms and Validation with Yup</h1>
+        <h1>React Hook Forms and Validation</h1>
         <RHF />
         <UserProfile />
         <Users />
         <Pagination />
         <ReduxMiniVersion />
         <UploadFile />
+        <ReduxCounter />
       </BrowserRouter>
     </div>
   );
